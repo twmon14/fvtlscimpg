@@ -1,0 +1,21 @@
+load ../examples/CCiMPG/TLS-old/tls.cafe .
+load ../examples/CCiMPG/TLS-old/proofscores/inv3.cafe .
+
+set-cores 4 .
+
+set-output ../examples/CCiMPG/TLS-old/proofscripts/inv3.cafe .
+
+:proven(inv1(P:Protocol, A:Pms))
+:proven(inv4(P:Protocol, A:Prin, B:Prin, R1:Rand, R2:Rand, L:ListOfChoices, C:Choice, I:Sid, S:Secret))
+
+:infer-proof inv3 .
+
+:save-proof .
+
+eof
+
+load ../examples/CCiMPG/TLS-old/cmdcimpg/inv3.cafe .
+
+eof
+
+load ../examples/CCiMPG/TLS-old/proofscripts/inv3.cafe .

@@ -1,0 +1,23 @@
+load ../examples/CCiMPG/TLS-old/tls.cafe .
+load ../examples/CCiMPG/TLS-old/proofscores/inv13.cafe .
+
+set-cores 4 .
+
+:proven(lm1(M1:Msg, M2:Msg, NW:Network))
+:proven(inv4(P:Protocol, A:Prin, B:Prin, R1:Rand, R2:Rand, L:ListOfChoices, C:Choice, I:Sid, S:Secret))
+:proven(inv8(P:Protocol, A:Prin, B:Prin, R1:Rand, R2:Rand, L:ListOfChoices, C:Choice, I:Sid, S:Secret))
+:proven(inv9(P:Protocol, A:Prin, K:PubKey))
+:proven(inv11(P:Protocol, A:Prin, B:Prin, K:PubKey))
+
+
+:infer-proof inv13 .
+
+set-output ../examples/CCiMPG/TLS-old/proofscripts/inv13.cafe .
+
+:save-proof .
+
+eof
+
+load ../examples/CCiMPG/TLS-old/cmdcimpg/inv13.cafe .
+
+load ../examples/CCiMPG/TLS-old/proofscripts/inv13.cafe .

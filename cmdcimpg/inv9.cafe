@@ -1,0 +1,13 @@
+load ../examples/CCiMPG/TLS/tls.cafe .
+load ../examples/CCiMPG/TLS/proofscores/inv9.cafe .
+
+set-cores 4 .
+
+:infer-proof inv9 .
+
+set-output ../examples/CCiMPG/TLS/genproofscripts/inv9.cafe .
+:save-proof .
+
+eof
+load ../examples/CCiMPG/TLS/cmdcimpg/inv9.cafe .
+load ../examples/CCiMPG/TLS/genproofscripts/inv9.cafe .

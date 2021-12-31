@@ -1,0 +1,17 @@
+load ../examples/CCiMPG/TLS/tls.cafe .
+load ../examples/CCiMPG/TLS/proofscores/inv5.cafe .
+
+set-cores 4 .
+
+set-output ../examples/CCiMPG/TLS/proofscripts/inv5.cafe .
+
+:proven(inv1(P:Protocol, A:Pms))
+:proven(inv6(P:Protocol, A:Prin, B:Prin, R1:Rand, R2:Rand, C:Choice, I:Sid, S:Secret))
+
+:infer-proof inv5 .
+
+:save-proof .
+
+eof
+load ../examples/CCiMPG/TLS/cmdcimpg/inv5.cafe .
+load ../examples/CCiMPG/TLS/proofscripts/inv5.cafe .

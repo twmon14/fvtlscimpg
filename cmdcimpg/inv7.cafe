@@ -1,0 +1,15 @@
+load ../examples/CCiMPG/TLS/tls.cafe .
+load ../examples/CCiMPG/TLS/proofscores/inv7.cafe .
+
+set-cores 4 .
+
+:proven(lm1(M1:Msg, M2:Msg, NW:Network))
+
+:infer-proof inv7 .
+
+set-output ../examples/CCiMPG/TLS/genproofscripts/inv7.cafe .
+:save-proof .
+
+eof
+load ../examples/CCiMPG/TLS/cmdcimpg/inv7.cafe .
+load ../examples/CCiMPG/TLS/genproofscripts/inv7.cafe .
