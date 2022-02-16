@@ -1,0 +1,16 @@
+load ../examples/CCiMPG/TLS-old/tls.cafe .
+load ../examples/CCiMPG/TLS-old/inv14.cafe .
+
+set-cores 4 .
+
+set-output ../examples/CCiMPG/TLS-old/gen14.cafe .
+
+:proven(lm1(M1:Msg, M2:Msg, NW:Network))
+
+:infer-proof inv14 .
+
+:save-proof .
+
+eof
+
+load ../examples/CCiMPG/TLS-old/cmd14.cafe .

@@ -1,0 +1,14 @@
+load ../examples/CCiMPG/TLS-old/tls.cafe .
+load ../examples/CCiMPG/TLS-old/inv2.cafe .
+
+set-cores 4 .
+
+set-output ../examples/CCiMPG/TLS-old/gen2.cafe .
+
+:infer-proof inv2 .
+
+:save-proof .
+
+eof
+
+load ../examples/CCiMPG/TLS-old/cmd2.cafe .

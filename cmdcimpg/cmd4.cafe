@@ -1,0 +1,16 @@
+load ../examples/CCiMPG/TLS-old/tls.cafe .
+load ../examples/CCiMPG/TLS-old/inv4.cafe .
+
+set-cores 4 .
+
+set-output ../examples/CCiMPG/TLS-old/gen4.cafe .
+
+:proven(inv1(P:Protocol, PMS:Pms))
+
+:infer-proof inv4 .
+
+:save-proof .
+
+eof
+
+load ../examples/CCiMPG/TLS-old/cmd4.cafe .
